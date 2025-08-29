@@ -24,3 +24,25 @@ The  function should
 
 Returns a list of employees working on that day.
 """
+
+shifts = {
+       "Alice": ["Monday", "Wednesday"],
+       "Bob": ["Tuesday", "Thursday"],
+       "Charlie": ["Monday", "Friday"]
+}
+
+def add_shift(employee, day):
+	if employee in shifts:
+		if day not in shifts[employee]:
+			shifts[employee].append(day)
+	else:
+		shifts[employee] = [day]
+	return shifts
+def get_schedule(day):
+	employees = []
+	for employee, days in shifts.items():
+		if day in days:
+			employees.append(employee)
+	return employees
+print(get_schedule("Monday")) 
+print(add_shift("Bob", "Friday"))
