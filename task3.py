@@ -18,3 +18,25 @@ print(calculate_grade(60))   # D
 print(calculate_grade(70))   # C
 print(calculate_grade(89))   # B
 """
+
+def calculate_grade(score):
+	if 90 <= score <= 100:
+		return "A"
+	elif 80 <= score <= 89:
+		return "B"
+	elif 70 <= score <= 79:
+		return "C"
+	elif 60 <= score <= 69:
+		return "D"
+	elif 0 <= score < 60:
+		return "F"
+
+print(calculate_grade(95))
+print(calculate_grade(88))
+print(calculate_grade(72))
+print(calculate_grade(65))
+print(calculate_grade(40))
+print(calculate_grade(100))
+print(calculate_grade(60))
+print(calculate_grade(70))   
+print(calculate_grade(89))
